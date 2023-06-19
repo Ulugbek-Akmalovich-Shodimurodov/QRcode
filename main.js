@@ -10,9 +10,25 @@ input.addEventListener('input', (e)=>{
 
     if(input.value == '') {
          image.src = `${'./QR.jpg'}`
-         link.href = `${'./QR.jpg'}`
         }
 
+})
+
+// share
+
+const shareBtn = document.querySelector('.btn_d')
+
+const title = window.document.title
+const url = "https://salom.uz"
+
+shareBtn.addEventListener('click', ()=>{
+    if(navigator.share){
+        navigator.share({
+            title : `${title}`,
+            url: `${api}${api2}${input.value ? input.value : 'Assalomu alaykum'}`
+        }).then(()=>{
+        }).catch(console.error)
+    }
 })
 
 
