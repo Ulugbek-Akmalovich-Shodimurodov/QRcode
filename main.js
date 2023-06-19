@@ -8,7 +8,10 @@ input.addEventListener('input', (e)=>{
     image.src = `${api}${api2}${input.value}`
     link.href = `${api}${api2}${input.value}`
 
-    if(input.value == '')  image.src = `${'./QR.jpg'}`
+    if(input.value == '') {
+         image.src = `${'./QR.jpg'}`
+         link.href = `${'./QR.jpg'}`
+        }
 
 })
 
