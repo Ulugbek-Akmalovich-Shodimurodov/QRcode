@@ -6,48 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
-
-    <script src="./node_modules/html5-qrcode/html5-qrcode.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,500;1,900&display=swap');
+        </style>
 </head>
 <body>
 
-    <div id="reader"></div>
-    <div id="result"></div>
-
-    <img src="">
-    <input type="text">
-    <button>Generate</button>
-    <a href="">Yuklab olish</a>
+    <div class="crad_box">
+        <h2 class="title">Render your QR Code</h2>
+        <img class="img_qr" src="./QR.jpg">
+        <input class="qr_inp" type="text" placeholder="https://example.com">
+        <button class="btn_r">Generate</button>
+        <a class="btn_d" href="">Yuklab olish</a>    
+    </div>
     
-    <script src="./main.js"></script>
-    <script>
-
-        const scanner = new Html5QrcodeScanner('reader', {
-            qrbox: {
-                width: 250,
-                height: 250,
-            },
-            fps: 20,
-        })
-
-        scanner.render(success, error)
-
-        function success(result){
-
-            document.getElementById(result).innerHTML  = `
-            <h2>Success !</h2>
-            <p><a href="${result}">${result}</a></p>
-            `
-            console.log(result);
-
-            scanner.clear();
-            document.getElementById('reader').remove()
-        }
-
-        function error(err){
-            console.error(err)
-            
-        }
-    </script>
 </body>
+<script src="./main.js"></script>
 </html>
