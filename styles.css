@@ -43,6 +43,8 @@ body {
 }
 .img_qr {
   text-align: center;
+  padding: 10px;
+  background: #fff;
   display: block;
   width: 250px;
   height: 250px;
@@ -52,7 +54,7 @@ body {
 .qr_inp {
   width: 260px;
 
-  background: #99ebf5;
+  background: #d7f6fa;
   border-radius: 10px;
   border: none;
   outline: none;
