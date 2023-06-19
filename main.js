@@ -7,15 +7,9 @@ const api2 = `create-qr-code/?size=450x450&data=`
 input.addEventListener('input', (e)=>{
     image.src = `${api}${api2}${input.value}`
     link.href = `${api}${api2}${input.value}`
-    console.log(image.src);
-    console.log(e);
-})
 
-const span = document.querySelector('.circle');
+    if(input.value == '')  image.src = `${'./QR.jpg'}`
 
-
-window.addEventListener('change', (e)=>{
-    console.log(e);
 })
 
 
